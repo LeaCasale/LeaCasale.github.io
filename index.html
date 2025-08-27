@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <meta name="google-site-verification" content="DUbHyKbzQvbLT5CE4csjOeYh7762abYEHbccArTznno" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Léa Casale</title>
@@ -105,10 +106,79 @@
   display: block;
 }
 }
+      body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+
+    .intro-screen {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #111, #444);
+      color: white;
+      flex-direction: column;
+    }
+
+    .enter-btn {
+      padding: 15px 30px;
+      font-size: 1.2em;
+      margin-top: 20px;
+      border: none;
+      border-radius: 8px;
+      background: #00aaff;
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .enter-btn:hover {
+      background: #0077aa;
+    }
+
+    .main-content {
+      display: none;
+      padding: 40px;
+      background: #f8f8f8;
+    }
+    }
 </style>
 </head>
 
 <body>
+    
+  <div class="intro-screen" id="intro">
+    <h1>Bienvenue</h1>
+    <button class="enter-btn" id="enterBtn">Entrer</button>
+  </div>
+
+  <div class="main-content" id="content">
+    <h2>Contenu principal du site</h2>
+    <p>La musique joue en arrière-plan.</p>
+  </div>
+
+  <audio id="bg-music" loop>
+    <source src="Music.mp3" type="audio/mpeg">
+    Votre navigateur ne supporte pas l'audio.
+  </audio>
+
+  <script>
+    const enterBtn = document.getElementById('enterBtn');
+    const intro = document.getElementById('intro');
+    const content = document.getElementById('content');
+    const music = document.getElementById('bg-music');
+
+    enterBtn.addEventListener('click', () => {
+      intro.style.display = 'none';
+      content.style.display = 'block';
+      music.play().catch(err => {
+        console.error("La lecture de la musique a échoué :", err);
+      });
+    });
+  </script>
     <!-- Navigation -->
     <nav id="navbar">
         <div class="nav-container">
@@ -180,6 +250,14 @@
   <div class="container">
     <h2 class="section-title fade-in">Ouvrages remarquables</h2>
     <div class="portfolio-grid">
+      <p class="intro-text">Retrouvez les ouvrages de <strong>Léa Casale</strong> publiés aux <em>Éditions Lacour</em>.</p>
+      <a href="https://www.editions-lacour.com/index.php/les-auteurs/categorie/1022-casale-lea" target="_blank" class="cta-button">
+        Voir les livres
+      </a>
+    </div>
+  </div>
+</section>
+
 
       <!-- Le secret de la tour de Capitello -->
       <div class="portfolio-item">
@@ -336,3 +414,4 @@
 
 </body>
 </html>
+
