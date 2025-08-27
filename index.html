@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Léa Casale</title>
+    <link href="templatemo-personal-style.css" rel="stylesheet">
+
+<style>
+/* Responsive grid for portfolio section */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  align-items: stretch;
+  margin-top: 1rem;
+}
+
+.portfolio-item {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 1.2rem;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.portfolio-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.portfolio-content h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.portfolio-content p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  flex-grow: 1;
+  hyphens: auto;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.portfolio-tech {
+  margin-top: 0.8rem;
+}
+
+.tech-tag {
+  display: inline-block;
+  background-color: #eaeaea;
+  color: #333;
+  border-radius: 6px;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.75rem;
+  margin-right: 0.4rem;
+  margin-bottom: 0.3rem;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .portfolio-item {
+    padding: 1rem;
+  }
+
+  .portfolio-content h4 {
+    font-size: 1rem;
+  }
+
+  .portfolio-content p {
+    font-size: 0.9rem;
+  }
+
+  .tech-tag {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+  }
+  .portfolio-image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.portfolio-image img {
+  max-width: 100%;
+  max-height: 400px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+}
+</style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">Léa Casale</div>
+            <ul class="nav-links">
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#portfolio">Ouvrages</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                <div class="hamburger"></div>
+                <div class="hamburger"></div>
+                <div class="hamburger"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-nav-links">
+            <li><a href="#home">Accueil</a></li>
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#portfolio">Ouvrages</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+            <div class="shape shape-5"></div>
+            <div class="shape shape-6"></div>
+        </div>
+<div class="hero-content">
+    <div class="hero-subtitle">Léa Casale</div>
+    <h1>Biographie de l'auteure Léa Casale</h1>
+    <p class="subtitle">Auteure corse passionnée, Léa Casale partage son univers à travers ses livres.</p>
+    <a href="#portfolio" class="cta-button">Découvrir son univers</a>
+</div>
+<div class="scroll-indicator" onclick="document.getElementById('about').scrollIntoView()"></div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about">
+    <div class="container">
+        <h2 class="section-title fade-in">Biographie</h2>
+        <div class="about-content">
+            <div class="about-image slide-in-left"></div>
+            <div class="about-text slide-in-right">
+                <h3>Une plume singulière et un goût prononcé pour la transmission</h3>
+                <p>Léa Casale explore l'écriture avec authenticité et exigence. Ses pages convoquent la mémoire, la mer et la Corse, dans une langue sensible et précise.</p>
+                <p>Chaque ouvrage s’inscrit dans une démarche d’écoute et d’attention au réel, avec la volonté de faire résonner des trajectoires intimes.</p>
+                <div class="skills">
+                    <span class="skill-tag">Écriture</span>
+                    <span class="skill-tag">Recherche</span>
+                    <span class="skill-tag">Lecture publique</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="portfolio" class="portfolio">
+  <div class="container">
+    <h2 class="section-title fade-in">Ouvrages remarquables</h2>
+    <div class="portfolio-grid">
+
+      <!-- Le secret de la tour de Capitello -->
+      <div class="portfolio-item">
+        <div class="portfolio-image">
+          <img src="https://media.electre-ng.com/images/image-id/f9147847e2f44810aee6509e36c6019b0ee8ba128e685b9235cd4a025860a2aa.jpg" alt="Couverture de Le secret de la tour de Capitello – Léa Casale">
+        </div>
+        <div class="portfolio-content">
+          <h4><a href="https://www.mollat.com/livres/118123/lea-casale-le-secret-de-la-tour-de-capitello" target="_blank">Le secret de la tour de Capitello</a></h4>
+          <p>Une rêverie autour de la tour de Capitello, entre origines, filiation et passions corses.</p>
+          <div class="portfolio-tech">
+            <span class="tech-tag">Roman</span>
+            <span class="tech-tag">Corse</span>
+            <span class="tech-tag">Mystère</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pierrot Bianconi, l’idole d’une génération -->
+      <div class="portfolio-item">
+        <div class="portfolio-image">
+          <img src="https://media.electre-ng.com/images/image-id/39ff06ee59f3025fbde75e6b27709942020bff9e74d646606761a821d964f632.jpg" alt="Couverture de Pierrot Bianconi, l’idole d’une génération – Léa Casale">
+        </div>
+        <div class="portfolio-content">
+          <h4><a href="https://www.mollat.com/livres/1207405/lea-casale-pierrot-bianconi-l-idole-d-une-generation" target="_blank">Pierrot Bianconi, l’idole d’une génération</a></h4>
+          <p>Récit biographique émouvant sur Pierrot Bianconi, proche de l'auteure, disparu tragiquement en 1993.</p>
+          <div class="portfolio-tech">
+            <span class="tech-tag">Biographie</span>
+            <span class="tech-tag">Hommage</span>
+            <span class="tech-tag">Corse</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fragments de lune -->
+      <div class="portfolio-item">
+        <div class="portfolio-image">
+          <img src="https://mollatcommon.blob.core.windows.net/nocouv/no_couv_medium.png" alt="Couverture de Fragments de lune – Léa Casale">
+        </div>
+        <div class="portfolio-content">
+          <h4><a href="https://www.mollat.com/livres/317863/lea-casale-fragments-de-lune" target="_blank">Fragments de lune</a></h4>
+          <p>Recueil poétique aux accents romantiques et mythologiques, inspiré de la Méditerranée.</p>
+          <div class="portfolio-tech">
+            <span class="tech-tag">Poésie</span>
+            <span class="tech-tag">Romantique</span>
+            <span class="tech-tag">Méditerranée</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Un jour, à Fiuminale… et autres nouvelles -->
+      <div class="portfolio-item">
+        <div class="portfolio-image">
+          <img src="https://media.electre-ng.com/images/image-id/69814810d5dbc839e78f74fefec5840484edb2beda816a51953461749e287dc0.jpg" alt="Couverture de Un jour, à Fiuminale… et autres nouvelles – Léa Casale">
+        </div>
+        <div class="portfolio-content">
+          <h4><a href="https://www.mollat.com/livres/133792/lea-casale-un-jour-a-fiuminale-et-autres-nouvelles" target="_blank">Un jour, à Fiuminale… et autres nouvelles</a></h4>
+          <p>Courtes nouvelles sensibles, voyageant entre souvenirs corses et paysages évocateurs.</p>
+          <div class="portfolio-tech">
+            <span class="tech-tag">Nouvelles</span>
+            <span class="tech-tag">Corse</span>
+            <span class="tech-tag">Narratif</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Le bleu de l’innocence -->
+      <div class="portfolio-item">
+        <div class="portfolio-image">
+          <img src="https://media.electre-ng.com/images/image-id/c6923196f9218e421199cd8dd315be77f4c854e2b7e78b5653bcb8fea8d8fdd4.jpg" alt="Couverture de Le bleu de l’innocence – Léa Casale">
+        </div>
+        <div class="portfolio-content">
+          <h4><a href="https://www.mollat.com/livres/1207203/lea-casale-le-bleu-de-l-innocence-chronique-d-une-disparition-mysterieuse" target="_blank">Le bleu de l’innocence</a></h4>
+          <p>Un hommage personnel et poignant à son frère, l’émotion à fleur de pages.</p>
+          <div class="portfolio-tech">
+            <span class="tech-tag">Hommage</span>
+            <span class="tech-tag">Sport</span>
+            <span class="tech-tag">Émotion</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+  <div class="contact-floating-shapes">
+    <div class="contact-shape contact-shape-1"></div>
+    <div class="contact-shape contact-shape-2"></div>
+    <div class="contact-shape contact-shape-3"></div>
+    <div class="contact-shape contact-shape-4"></div>
+    <div class="contact-shape contact-shape-5"></div>
+    <div class="contact-shape contact-shape-6"></div>
+  </div>
+  <div class="container">
+    <div class="contact-content">
+      <h2 class="section-title fade-in">Contact</h2>
+      <p class="fade-in">
+        Pour toute question concernant les ouvrages de <strong>Léa Casale</strong>, demandes d’édition ou de presse, merci de vous adresser à sa maison d’édition :
+      </p>
+      <div class="contact-details fade-in">
+        <p><strong>Lacour-Ollé</strong></p>
+        <p>Informations de contact actuellement non disponibles publiquement.</p>
+        <p>Vous pouvez adresser votre demande via la fiche de l’ouvrage :</p>
+        <p>
+          <a href="https://www.mollat.com/livres/1207405/lea-casale-pierrot-bianconi-l-idole-d-une-generation" target="_blank">
+            Voir la fiche du livre sur mollat.com
+          </a>
+        </p>
+      </div>
+
+      <form class="contact-form fade-in" action="#" method="post">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Nom</label>
+            <input type="text" id="name" name="name" placeholder="Votre nom" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Votre email" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Votre message" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Envoyer</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-left">
+                <p>&copy; 2025 Léa Casale. Tous droits réservés.</p>
+            </div>
+            <div class="footer-right">
+                <a href="#contact">Contact</a>
+                <a href="https://www.mollat.com/livres/1207405/lea-casale-pierrot-bianconi-l-idole-d-une-generation" target="_blank">Éditeur</a>
+                <a href="#portfolio">Bibliographie</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="templatemo-personal-javascripts.js"></script>
+
+</body>
+</html>
